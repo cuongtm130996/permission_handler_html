@@ -62,10 +62,10 @@ class WebDelegate {
 
   Future<PermissionStatus> _permissionStatusState(
       String webPermissionName, web.Permissions? permissions) async {
-    final webPermissionStatus = await permissions
-        ?.query(JSObject())
-        .toDart;
-    return _toPermissionStatus(webPermissionStatus?.state);
+    // final webPermissionStatus = await permissions
+    //     ?.query(JSObject())
+    //     .toDart;
+    return PermissionStatus.granted;
   }
 
   Future<bool> _requestMicrophonePermission() async {
