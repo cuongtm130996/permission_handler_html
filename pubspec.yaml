@@ -14,7 +14,10 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   permission_handler_platform_interface: ^4.1.0
-  web: ^0.5.1
+  web:
+    git:
+      url: https://github.com/cuongtm130996/web
+      ref: main
 
 dev_dependencies:
   flutter_test:
