@@ -10,7 +10,7 @@ import 'web_delegate.dart';
 
 /// Platform implementation of the permission_handler Flutter plugin.
 class WebPermissionHandler extends PermissionHandlerPlatform {
-  static final web.MediaDevices? _devices = web.window.navigator.mediaDevices;
+  // static final web.MediaDevices? _devices = web.window.navigator.mediaDevices;
   static final web.Geolocation? _geolocation = web.window.navigator.geolocation;
   static final web.Permissions? _htmlPermissions =
       web.window.navigator.permissions;
@@ -21,7 +21,7 @@ class WebPermissionHandler extends PermissionHandlerPlatform {
   static void registerWith(Registrar registrar) {
     PermissionHandlerPlatform.instance = WebPermissionHandler(
       webDelegate: WebDelegate(
-        _devices,
+        null,
         _geolocation,
         _htmlPermissions,
       ),
